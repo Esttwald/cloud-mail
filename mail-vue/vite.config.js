@@ -53,6 +53,9 @@ export default defineConfig(({mode}) => {
         },
         build: {
             target: 'es2022',
+            // Use fresh URLs after the upgrade and load all component styles upfront.
+            assetsDir: 'assets/v3.4.0-layout-fix',
+            cssCodeSplit: false,
             outDir: env.VITE_OUT_DIR || 'dist',
             emptyOutDir: true,
             assetsInclude: ['**/*.json']
